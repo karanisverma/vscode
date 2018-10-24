@@ -1132,16 +1132,6 @@ declare module 'vscode' {
 	}
 	//#endregion
 
-	//#region #59232
-
-	export interface QuickPickItem {
-		/**
-		 * Show this item always
-		 */
-		alwaysShow?: boolean;
-	}
-	//#endregion
-
 	//#region Tree Item Label Highlights
 	/**
 	 * Label describing the [Tree item](#TreeItem)
@@ -1172,4 +1162,18 @@ declare module 'vscode' {
 		 */
 		constructor(label: TreeItemLabel, collapsibleState?: TreeItemCollapsibleState);
 	}
+	//#endregion
+
+	//#region Task
+	/**
+	 * Controls how the task is presented in the UI.
+	 */
+	export interface TaskPresentationOptions {
+		/**
+		 * Controls whether the terminal is cleared before executing the task.
+		 */
+		clear?: boolean;
+	}
+	//#endregion
+
 }
